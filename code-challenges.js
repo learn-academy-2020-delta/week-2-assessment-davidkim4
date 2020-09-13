@@ -91,7 +91,7 @@ console.log(firstVowelIndex(vowelTester2));
 const calculator = (num1, operator, num2) => {
     //Checks to see if num2 argument is 0. If it is, then it will return the string interpolation, else, it will use eval() to combine all 3 arguments into a mathematical calculation.
     //I remembered how to use eval() from week 1 office hours :) 
-    return num2 === 0 ? `Can't divide by ${num2}!` : eval(num1 + operator + num2)
+    return operator === "/" && num2 === 0 ? `Can't divide by ${num2}!` : eval(num1 + operator + num2)
 }
 // Uncomment and use the following console logs to test your function
 console.log(calculator(3, "*", 9))
