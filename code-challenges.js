@@ -89,7 +89,7 @@ console.log(firstVowelIndex(vowelTester2));
 // --------------------5) Create a function that takes three arguments - two numbers and a mathematical operation (+, -, *, /) and performs the given calculation. If the input tries to divide by 0, return: "Can't divide by 0!"
 
 const calculator = (num1, operator, num2) => {
-    //Checks to see if num2 argument is 0. If it is, then it will return the string interpolation, else, it will use eval() to combine all 3 arguments into a mathematical calculation.
+    //Checks to see if operator argument is "/" and num2 argument is 0. If it is, then it will return the string interpolation, else, it will use eval() to combine all 3 arguments into a mathematical calculation.
     //I remembered how to use eval() from week 1 office hours :) 
     return operator === "/" && num2 === 0 ? `Can't divide by ${num2}!` : eval(num1 + operator + num2)
 }
